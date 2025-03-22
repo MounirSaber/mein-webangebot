@@ -1,78 +1,70 @@
+/* Allgemeine Stile */
 body {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
     color: #333;
-    background-color: #f0f0f0;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
+    padding: 0;
 }
 
 nav ul li {
-    margin-left: 2rem;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+    color: #007BFF;
 }
 
-.hero {
-    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1, h2 {
     color: #333;
-    text-align: center;
-    padding: 8rem 0;
-    animation: fadeIn 1s ease-out;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cta-button {
-    background-color: #007bff;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
     color: #fff;
-    padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -80,79 +72,41 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
-.services, .pricing, .contact {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 2rem;
+/* Animationen */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.service-grid, .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
 }
 
-.service, .pricing-plan {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
-.service:hover, .pricing-plan:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
 }
 
-.price {
-    font-size: 1.5rem;
-    color: #007bff;
+.slide-in {
+    animation: slideIn 1s ease-out forwards;
 }
 
-form {
-    display: grid;
-    gap: 1rem;
-}
-
-input, textarea {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
+.pulse {
+    animation: pulse 2s infinite;
 }
 
 footer {
     text-align: center;
-    padding: 2rem 0;
-    background-color: #1a1a1a;
+    padding: 10px;
+    background-color: #333;
     color: #fff;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1s forwards;
 }

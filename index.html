@@ -3,91 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webdesign für kleine Unternehmen</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Webdesign für Kleinunternehmen | Dein Name</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1>Professionelle Webseiten für kleine Unternehmen</h1>
-        <p>Modern, mobilfreundlich & bezahlbar – dein persönlicher Webdesigner</p>
-        <a href="#kontakt" class="cta-button">Jetzt kostenlos beraten lassen</a>
+        <nav>
+            <div class="logo">Dein Logo</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dienstleistungen">Dienstleistungen</a></li>
+                <li><a href="#preise">Preise</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <!-- Über mich -->
-        <section id="ueber-mich">
-            <h2>Über mich</h2>
-            <p>Ich bin Mounir Saber – spezialisiert auf moderne Webseiten für kleine Unternehmen, Selbstständige und Dienstleister. Kein Technik-Kauderwelsch, sondern ehrlicher Service zu fairen Preisen.</p>
-        </section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Webdesign, das dein Unternehmen voranbringt</h1>
+            <p>Wir gestalten moderne und benutzerfreundliche Websites, die speziell auf die Bedürfnisse von Kleinunternehmen zugeschnitten sind. Lass uns deine Vision zum Leben erwecken.</p>
+            <a href="#kontakt" class="cta-button">Jetzt Kontakt aufnehmen</a>
+        </div>
+    </section>
 
-        <!-- Leistungen -->
-        <section id="leistungen">
-            <h2>Leistungen</h2>
-            <ul>
-                <li>Individuelles Webdesign</li>
-                <li>Mobiloptimiert (Smartphone & Tablet)</li>
-                <li>Domain & Hosting</li>
-                <li>DSGVO-konform</li>
-                <li>Updates & Betreuung</li>
-                <li>Grund-SEO & Google My Business</li>
-            </ul>
-        </section>
-
-        <!-- Preise -->
-        <section id="preise">
-            <h2>Preise</h2>
-            <div class="paket">
-                <h3>Web Basic Paket</h3>
-                <p><strong>Einmalig: 399 €</strong> (Einrichtung)</p>
-                <p><strong>39 €/Monat</strong> (Betreuung, Hosting, Support)</p>
-                <p>Inklusive bis zu 5 Seiten, Hosting, regelmäßige Updates und persönlicher Support.</p>
+    <section id="dienstleistungen" class="services">
+        <h2>Unsere Dienstleistungen</h2>
+        <div class="service-grid">
+            <div class="service">
+                <h3>Webdesign</h3>
+                <p>Individuelles Design, das deine Marke widerspiegelt.</p>
             </div>
-            <!-- Optional: Weitere Pakete -->
-            <!--
-            <div class="paket">
-                <h3>Web Plus Paket</h3>
-                <p><strong>Einmalig: 699 €</strong> | <strong>59 €/Monat</strong></p>
-                <p>Erweiterter Funktionsumfang, SEO-Texte, Newsletter, Terminbuchung etc.</p>
+            <div class="service">
+                <h3>Responsive Entwicklung</h3>
+                <p>Optimiert für alle Geräte, von Desktop bis Mobil.</p>
             </div>
-            -->
-        </section>
+            <div class="service">
+                <h3>SEO-Optimierung</h3>
+                <p>Bessere Sichtbarkeit in Suchmaschinen.</p>
+            </div>
+            <div class="service">
+                <h3>Wartung & Support</h3>
+                <p>Zuverlässige Betreuung auch nach dem Launch.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Referenzen -->
-        <section id="referenzen">
-            <h2>Kundenmeinungen</h2>
-            <blockquote>„Schneller Service, super Ergebnis – sehr zu empfehlen!“<br><cite>– Friseurstudio Bella</cite></blockquote>
-            <blockquote>„Tolle Beratung, faire Preise und moderne Website.“<br><cite>– KFZ-Service Müller</cite></blockquote>
-        </section>
+    <section id="preise" class="pricing">
+        <h2>Unsere Preise</h2>
+        <div class="pricing-grid">
+            <div class="pricing-plan">
+                <h3>Basis</h3>
+                <p>Grundlegende Website für den Einstieg.</p>
+                <p class="price">Ab 500€</p>
+            </div>
+            <div class="pricing-plan">
+                <h3>Standard</h3>
+                <p>Umfangreiche Website mit zusätzlichen Funktionen.</p>
+                <p class="price">Ab 1200€</p>
+            </div>
+            <div class="pricing-plan">
+                <h3>Premium</h3>
+                <p>Maßgeschneiderte Lösung für höchste Ansprüche.</p>
+                <p class="price">Individuelles Angebot</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- Kontakt -->
-        <section id="kontakt">
-            <h2>Kontakt</h2>
-            <p>📞 Tel: 0176 57928176</p>
-            <p>📧 E-Mail: saber_mounir@yahoo.com</p>
-            <p>📍 Standort: Deutschland / Germany</p>
+    <section id="kontakt" class="contact">
+        <h2>Kontakt</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="E-Mail">
+            <textarea placeholder="Nachricht"></textarea>
+            <button type="submit">Senden</button>
+        </form>
+    </section>
 
-            <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" placeholder="Dein Name" required><br>
-
-                <label for="email">E-Mail:</label><br>
-                <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse" required><br>
-
-                <label for="nachricht">Nachricht:</label><br>
-                <textarea id="nachricht" name="nachricht" placeholder="Wie kann ich dir helfen?" required></textarea><br>
-
-                <button type="submit">Nachricht senden</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Mounir Saber – Webdesign für kleine Unternehmen</p>
-        <p>
-            <a href="#">Impressum</a> | <a href="#">Datenschutzerklärung</a>
-        </p>
+        <p>&copy; 2024 Dein Name | Webdesign für Kleinunternehmen</p>
     </footer>
 
 </body>
